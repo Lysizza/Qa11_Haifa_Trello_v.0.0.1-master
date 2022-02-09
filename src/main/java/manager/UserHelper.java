@@ -73,7 +73,7 @@ public class UserHelper extends HelperBase{
 
     public String textErrorMessage(){
 
-        return elementGetText(By.cssSelector("#error p"));
+        return elementGetText(By.cssSelector("div[id='error'] p[class='error-message']"));
     }
 
     public String textErrorWrongPasswordDisplaed() {
