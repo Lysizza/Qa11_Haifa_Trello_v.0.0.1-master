@@ -12,21 +12,25 @@ public class BoardHelper extends HelperBase{
         super(wd);
     }
 
-    public void initCreateBoard() {
+    public void initCteationBoard() {
         click(By.cssSelector("[data-test-id ='create-board-tile']"));
     }
 
     public void fillBoardCreationForm(Board board) {
-        type(By.cssSelector("[data-test-id ='create-board-title-input']"), board.getTitle());
-//        String a = "Hell";
-//        String b = "o";
-        String locator = "button[title='" + board.getColor()+"']"; //skleivanie = concatonaciya
 
-        String locator1 = String.format("button[title='%s'",board.getColor());
+        type(By.cssSelector("[data-test-id ='create-board-title-input']"), board.getTitle());
+        
+       
+        
+        //String  locator = "button[title='" + "Blue"+ "']";
+        String  locator = "button[title='" + board.getColor()+ "']"; //button[title='Blue']
+        
+        String locator1 = String.format("//button[title='%s']",board.getColor());
+        
         click(By.cssSelector(locator));
     }
 
-    public void SubmitCreationBoard() {
+    public void submitCrationBoard() {
         click(By.cssSelector("[data-test-id='create-board-submit-button']"));
     }
 
@@ -35,13 +39,14 @@ public class BoardHelper extends HelperBase{
     }
 
     public boolean isBoardCreatedByTitle(Board board) {
-        //div.content-all-boards>div>div:nth-child(2)
+//div.content-all-boards>div>div:nth-child(2)
         //div.content-all-boards>div>div:nth-child(2) ul a
         //div.content-all-boards>div>div:nth-child(2) ul div[title]
         List<WebElement> list = wd.findElements(By.cssSelector("div.content-all-boards>div>div:nth-child(2) ul div[title]"));
+
         for (WebElement el:list) {
             el.getAttribute("title").equals(board.getTitle());
-        return true;
+            return true;
         }
         return false;
     }

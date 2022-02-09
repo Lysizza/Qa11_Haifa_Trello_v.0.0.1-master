@@ -2,6 +2,8 @@ package tests;
 
 import models.Auth;
 import models.User;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -54,7 +56,7 @@ public void preCondition(){
     public void loginSuccessNew(){
 
         app.user().initLogin();
-        app.user().fillLoginForm("alisa.test25@gmail.com","As7166735@$");
+        app.user().fillLoginForm("alisa.test25@gmail.com","Hatum21$");
         app.user().submitLogin();
 
         Assert.assertTrue(app.user().isAvatarPresent());
@@ -63,7 +65,8 @@ public void preCondition(){
     @Test
     public void loginSuccessNewModel(){
 
-        User user = new User().withEmail("alisa.test25@gmail.com").withPassword("As7166735@$");
+        User user = new User().withEmail("alisa.test25@gmail.com").withPassword("Hatum21$");
+
 
         app.user().initLogin();
         app.user().fillLoginForm(user);
@@ -82,12 +85,10 @@ public void preCondition(){
 
         Assert.assertTrue(app.user().isAvatarPresent());
     }
-
     @Test
     public void loginSuccessNewModelLombok(){
 
         Auth auth = Auth.builder().email("alisa.test25@gmail.com").password("As7166735@$").build();
-
 
         app.user().initLogin();
         app.user().fillLoginForm(auth);
@@ -95,7 +96,6 @@ public void preCondition(){
 
         Assert.assertTrue(app.user().isAvatarPresent());
     }
-
 @Test
     public void loginUnsuccessfulWithWrongEmail(){
     app.user().initLogin();
@@ -112,7 +112,7 @@ public void preCondition(){
     public void loginUnsuccessfulWithWrongPassword(){
 
     app.user().initLogin();
-    app.user().fillLoginForm("alisa.test25gmail.com","As7166735");
+    app.user().fillLoginForm("alisa.test25@gmail.com","As7166");
     app.user().submitLogin();
 
     app.user().pause(1000);

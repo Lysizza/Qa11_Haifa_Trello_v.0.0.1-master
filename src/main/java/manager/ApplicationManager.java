@@ -2,6 +2,7 @@ package manager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,7 +13,7 @@ public class ApplicationManager {
     BoardHelper board;
 
     public void init(){
-        wd = new ChromeDriver();
+       wd = new ChromeDriver();
 
         //wd = new FirefoxDriver();
 
@@ -31,7 +32,7 @@ public class ApplicationManager {
         return user;
     }
 
-    public BoardHelper board(){
+    public BoardHelper board() {
         return board;
     }
 }

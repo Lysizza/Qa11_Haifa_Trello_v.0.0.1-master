@@ -5,10 +5,11 @@ import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.Collection;
+
 public class UserHelper extends HelperBase{
 
     public UserHelper(WebDriver wd) {
-
         super(wd);
     }
 
@@ -40,7 +41,6 @@ public class UserHelper extends HelperBase{
 
     }
 
-
     public void fillLoginFormWrongEmail(String email, String password){
         type(By.id("user"),email);
         type(By.id("password"),password);
@@ -57,7 +57,6 @@ public class UserHelper extends HelperBase{
 
 
     public boolean isLogged(){
-
         return isAvatarPresent();
     }
 
@@ -67,17 +66,14 @@ public class UserHelper extends HelperBase{
         click(By.id("logout-submit"));
     }
     public void submitLoginWithError(){
-
         click(By.id("login"));
     }
 
     public String textErrorMessage(){
-
-        return elementGetText(By.cssSelector("div[id='error'] p[class='error-message']"));
+        return elementGetText(By.cssSelector("#error p"));
     }
 
     public String textErrorWrongPasswordDisplaed() {
-
         return elementGetText(By.cssSelector("#login-error span"));
     }
 }
