@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c93113f3-131f-4b56-bc2d-863f27f43887" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/UserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/UserHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../proj/ilCarro" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Qa11_Haifa_DemoQa-master" />
   </component>
   <component name="RunManager" selected="Gradle.LoginTests.loginUnsuccessfulWithWrongEmail">
     <configuration name="AddNewBoardTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
