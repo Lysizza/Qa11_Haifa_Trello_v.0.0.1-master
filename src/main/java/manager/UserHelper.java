@@ -21,7 +21,7 @@ public class UserHelper extends HelperBase{
 
     public void fillLoginForm(String email, String password) {
         type(By.id("user"),email);
-        click((By.id("login")));
+        click(By.id("login"));
         pause(2000);
         type(By.id("password"),password);
 
@@ -35,7 +35,7 @@ public class UserHelper extends HelperBase{
     }
     public void fillLoginForm(Auth auth) {
         type(By.id("user"), auth.getEmail());
-        click((By.id("login")));
+        click(By.id("login"));
         pause(2000);
         type(By.id("password"), auth.getPassword());
 

@@ -56,7 +56,7 @@ public void preCondition(){
     public void loginSuccessNew(){
 
         app.user().initLogin();
-        app.user().fillLoginForm("alisa.test25@gmail.com","Hatum21$");
+        app.user().fillLoginForm("alisa.test25@gmail.com","As7166735@$");
         app.user().submitLogin();
 
         Assert.assertTrue(app.user().isAvatarPresent());
@@ -65,7 +65,7 @@ public void preCondition(){
     @Test
     public void loginSuccessNewModel(){
 
-        User user = new User().withEmail("alisa.test25@gmail.com").withPassword("Hatum21$");
+        User user = new User().withEmail("alisa.test25@gmail.com").withPassword("As7166735@$");
 
 
         app.user().initLogin();
@@ -112,7 +112,7 @@ public void preCondition(){
     public void loginUnsuccessfulWithWrongPassword(){
 
     app.user().initLogin();
-    app.user().fillLoginForm("alisa.test25@gmail.com","As7166");
+    app.user().fillLoginForm("alisa.test25@gmail.com","As7166735");
     app.user().submitLogin();
 
     app.user().pause(1000);
