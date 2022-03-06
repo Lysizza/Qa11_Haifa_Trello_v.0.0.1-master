@@ -53,6 +53,26 @@ public void preCondition(){
   //  }
 
     @Test
+    public void loginSuccessTestTesttestJS(){
+
+        app.user().initLogin();
+        app.user().fillLoginFormTestTestTestJS("alisa.test25@gmail.com","As7166735@$");
+        app.user().submitLogin();
+
+        Assert.assertTrue(app.user().isAvatarPresent());
+    }
+    @Test
+    public void loginSuccessTestTesttest(){
+
+        app.user().initLogin();
+        app.user().fillLoginFormTestTestsTests("alisa.test25@gmail.com","As7166735@$");
+        app.user().submitLogin();
+
+        Assert.assertTrue(app.user().isAvatarPresent());
+    }
+
+
+    @Test
     public void loginSuccessNew(){
 
         app.user().initLogin();

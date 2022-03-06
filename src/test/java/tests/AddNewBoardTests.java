@@ -19,10 +19,11 @@ public class AddNewBoardTests extends TestBase{
 
     @Test
     public void addNewBoardSuccess(){
-        Board board = Board.builder().title("Blue1").color("Blue").build();
+        Board board = Board.builder().title("B52").color("Blue").build();
 
         app.board().initCteationBoard();
         app.board().fillBoardCreationForm(board);
+        app.board().pause(3000);
         app.board().submitCrationBoard();
         app.board().pause(2000);
         app.board().returnToHome();

@@ -3,6 +3,8 @@ package manager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HelperBase {
 
@@ -25,6 +27,10 @@ public class HelperBase {
         wd.findElement(locator).click();
     }
 
+    public void waite(){
+        new WebDriverWait(wd,10).until(ExpectedConditions.visibilityOf(wd.findElement(By.id("elenentId"))));
+    }
+
     // 1000ms = 1sec
     public void pause( int millis) {
         try {
@@ -33,6 +39,8 @@ public class HelperBase {
             e.printStackTrace();
         }
     }
+
+
 
     public boolean isElementPresent(By locator){
         return wd.findElements(locator).size()>0;
